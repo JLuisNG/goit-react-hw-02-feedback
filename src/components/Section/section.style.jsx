@@ -14,17 +14,17 @@ export const Container = styled.div`
   flex-direction: column; 
   gap: 30px;
 
-  box-shadow: 0 0 200px red, 
+  box-shadow: 0 0 2000px red, 
   inset 0 0 300px #460f0f;  
 
   h2{
-    color: #460f0f;
+    color: #d16767a2;
     text-shadow: 0 0 10px rgba(255,255,255,0.5);
   }
 
   li{
-    color: #460f0f;
-    text-shadow: 0 0 8px rgba(255,255,255,0.3); 
+    color: #a664c0a2;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3); 
   }
 
 `;

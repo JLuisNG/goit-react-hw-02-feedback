@@ -8,5 +8,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 );
-
-<script defer src="https://app.embed.im/snow.js"></script>

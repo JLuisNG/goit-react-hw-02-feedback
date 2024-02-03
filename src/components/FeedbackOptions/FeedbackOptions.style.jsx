@@ -7,13 +7,14 @@ export const ButtonsContainer = styled.div`
 `
 
 export const Button = styled.button`
-    background-color: white;
+    background-color: #ff00954d;
     padding: 10px;
     border: none;
-    box-shadow: 3px 3px 5px #EFEFEF;
+    box-shadow: 3px 3px 5px #ff0095;
     cursor: pointer;
 
     &:hover{
-        background-color: #EFEFEF;
+        background-color: #ff0040a2;
+        filter: blur(1px)
     }
 `
