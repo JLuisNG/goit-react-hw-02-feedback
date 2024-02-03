@@ -2,6 +2,8 @@ import { Section } from 'components/Section/Section';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Statics from 'components/Statistics/Statistics';
 import React, { Component } from 'react';
+import Snowfall from 'react-snowfall';
+import './styles.css';
 
 export class App extends Component {
   state = {
@@ -32,23 +34,28 @@ export class App extends Component {
 
   render() {
     return (
-      <Section title="Please leave feedback">
-        <FeedbackOptions
-          options={this.state}
-          onLeaveFeedback={this.handleFeedBack}
-        ></FeedbackOptions>
-        {this.countTotalFeedback() !== 0 ? (
-          <Statics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
-          ></Statics>
-        ) : (
-          <h2>No feedback given</h2>
-        )}
-      </Section>
+      <div>
+        <Snowfall snowflakeCount={250} />
+        
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={this.state}
+            onLeaveFeedback={this.handleFeedBack}
+          ></FeedbackOptions>
+          {this.countTotalFeedback() !== 0 ? (
+            <Statics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            ></Statics>
+          ) : (
+            <h2>No feedback given</h2>
+          )}
+        </Section>
+      </div>
     );
+
   }
 }
